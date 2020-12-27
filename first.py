@@ -26,3 +26,14 @@ st.subheader("Joinplot")
 sns.jointplot(x='total_bill', y='tip', data=tips, kind='scatter')
 st.pyplot()
 
+st.subheader("Pairplot")
+sns.pairplot(tips,hue='sex',palette='rainbow')
+st.pyplot()
+#Rugplot
+st.subheader("Rugplot")
+sns.rugplot(tips['tip'])
+st.pyplot()
+#Correation
+st.subheader("Heatmap")
+sns.heatmap(tips.corr(),cmap='coolwarm',annot=True)
+st.pyplot()
